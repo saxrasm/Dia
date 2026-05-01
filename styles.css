@@ -10,6 +10,7 @@
   --gold: #c9a63d;
   --green: #56a66f;
   --shadow: rgba(0, 0, 0, 0.36);
+  --pixel: "Press Start 2P", monospace;
 }
 
 * {
@@ -30,6 +31,39 @@ body {
     linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
     #101115;
   background-size: 54px 54px, 54px 54px, auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.035) 0,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(201, 166, 61, 0.035),
+      transparent 18%,
+      transparent 82%,
+      rgba(111, 146, 175, 0.045)
+    );
+  mix-blend-mode: screen;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 10px;
+  z-index: 11;
+  border: 1px solid rgba(242, 238, 232, 0.09);
+  pointer-events: none;
 }
 
 img {
@@ -60,10 +94,12 @@ img {
 .section-kicker {
   margin: 0 0 12px;
   color: var(--gold);
-  font-size: 0.78rem;
-  font-weight: 800;
+  font-family: var(--pixel);
+  font-size: 0.58rem;
+  font-weight: 400;
   letter-spacing: 0;
   text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000;
 }
 
 h1,
@@ -77,6 +113,10 @@ h1 {
   font-size: clamp(4.7rem, 14vw, 12rem);
   line-height: 0.76;
   font-weight: 800;
+  text-shadow:
+    3px 0 0 rgba(111, 146, 175, 0.32),
+    -3px 0 0 rgba(143, 111, 139, 0.28),
+    0 8px 0 rgba(0, 0, 0, 0.42);
 }
 
 h2 {
@@ -84,6 +124,7 @@ h2 {
   font-size: clamp(2rem, 4vw, 4.6rem);
   line-height: 0.95;
   font-weight: 800;
+  text-shadow: 0 4px 0 rgba(0, 0, 0, 0.48);
 }
 
 .lead {
@@ -104,24 +145,33 @@ h2 {
   min-height: 38px;
   display: inline-flex;
   align-items: center;
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  border: 1px solid rgba(242, 238, 232, 0.18);
+  border-radius: 2px;
   padding: 8px 12px;
   color: var(--ink);
-  background: rgba(29, 29, 34, 0.72);
-  box-shadow: 0 18px 50px var(--shadow);
-  font-size: 0.9rem;
-  font-weight: 700;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 42%),
+    rgba(29, 29, 34, 0.78);
+  box-shadow:
+    inset 2px 2px 0 rgba(255, 255, 255, 0.08),
+    inset -2px -2px 0 rgba(0, 0, 0, 0.42),
+    0 18px 50px var(--shadow);
+  font-family: var(--pixel);
+  font-size: 0.56rem;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .hero-figure {
   min-height: 0;
   margin: 0;
-  border: 1px solid rgba(201, 166, 61, 0.26);
-  border-radius: 8px;
+  border: 1px solid rgba(242, 238, 232, 0.16);
+  border-radius: 2px;
   overflow: hidden;
   background: #131418;
-  box-shadow: 0 28px 80px var(--shadow);
+  box-shadow:
+    inset 0 0 0 2px rgba(0, 0, 0, 0.52),
+    0 28px 80px var(--shadow);
 }
 
 .hero-figure img {
@@ -129,6 +179,8 @@ h2 {
   height: min(74vh, 780px);
   object-fit: cover;
   object-position: 50% 34%;
+  filter: saturate(0.88) contrast(1.08);
+  image-rendering: auto;
 }
 
 .profile-grid {
@@ -139,11 +191,16 @@ h2 {
 }
 
 .profile-panel {
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  border: 1px solid rgba(242, 238, 232, 0.14);
+  border-radius: 2px;
   padding: clamp(22px, 4vw, 42px);
-  background: rgba(29, 29, 34, 0.86);
-  box-shadow: 0 22px 70px var(--shadow);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), transparent 34%),
+    rgba(29, 29, 34, 0.9);
+  box-shadow:
+    inset 2px 2px 0 rgba(255, 255, 255, 0.07),
+    inset -2px -2px 0 rgba(0, 0, 0, 0.48),
+    0 22px 70px var(--shadow);
 }
 
 .intro-panel p:not(.section-kicker) {
@@ -176,8 +233,9 @@ dl div:first-child {
 
 dt {
   color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 800;
+  font-family: var(--pixel);
+  font-size: 0.54rem;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -208,11 +266,13 @@ dd {
   width: min(100%, 390px);
   aspect-ratio: 0.58;
   margin: 0;
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  border: 1px solid rgba(242, 238, 232, 0.16);
+  border-radius: 2px;
   overflow: hidden;
   background: var(--panel);
-  box-shadow: 0 24px 70px var(--shadow);
+  box-shadow:
+    inset 0 0 0 2px rgba(0, 0, 0, 0.52),
+    0 24px 70px var(--shadow);
 }
 
 .turn {
@@ -223,6 +283,7 @@ dd {
   object-fit: contain;
   object-position: 50% 100%;
   background: #121318;
+  filter: saturate(0.9) contrast(1.08);
   opacity: 0;
   animation: rotateTurn 4.8s steps(1, end) infinite;
 }
@@ -248,8 +309,9 @@ dd {
   padding: 12px 14px;
   background: rgba(18, 19, 24, 0.82);
   color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 800;
+  font-family: var(--pixel);
+  font-size: 0.52rem;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -293,10 +355,13 @@ dd {
 
 .sheet-section img {
   width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  border: 1px solid rgba(242, 238, 232, 0.16);
+  border-radius: 2px;
   background: var(--panel-soft);
-  box-shadow: 0 28px 80px var(--shadow);
+  box-shadow:
+    inset 0 0 0 2px rgba(0, 0, 0, 0.52),
+    0 28px 80px var(--shadow);
+  filter: saturate(0.9) contrast(1.06);
 }
 
 @media (max-width: 880px) {
