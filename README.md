@@ -15,7 +15,7 @@ the quiet parts.
 <br>
 <br>
 
-<img src="assets/images/dia-sheet.png" alt="Dia character sheet" width="780">
+<img src="assets/images/dia-sheet-clean.png" alt="Dia character sheet" width="780">
 
 </div>
 
@@ -25,8 +25,8 @@ Dia is guarded, not cold. She jokes when things get too honest, leaves before
 the room can ask for more, and somehow still carries the softest expectations
 under all that distance.
 
-Her look is casual on purpose: purple tee, cargo pants, chain, crossbody bag,
-heavy hair, and the kind of quiet confidence that does not need a speech.
+Her look is casual on purpose: brown eyes, purple tee, cargo pants, chain,
+crossbody bag, heavy hair, and the kind of quiet confidence that does not need a speech.
 She is dramatic in the private way. The face says she is fine. The outfit says
 she already knew you would look.
 
@@ -49,9 +49,3 @@ she already knew you would look.
     <td align="center"><img src="assets/images/dia-left-crop.png" alt="Dia left side view" width="150"><br><strong>Left</strong></td>
   </tr>
 </table>
-
-## Notes
-
-This repository includes both the GitHub README profile and a static site
-version in [`index.html`](index.html). The button above opens the rendered
-site directly through HTML Preview.
