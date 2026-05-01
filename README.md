@@ -15,7 +15,7 @@ the quiet parts.
 <br>
 <br>
 
-<img src="assets/images/dia-sheet-clean.png" alt="Dia character sheet" width="780">
+<img src="assets/images/dia-pfp-glasses.png" alt="Dia wearing sunglasses" width="220">
 
 </div>
 
@@ -41,11 +41,6 @@ she already knew you would look.
 
 ## Turnaround
 
-<table>
-  <tr>
-    <td align="center"><img src="assets/images/dia-front-crop.png" alt="Dia front view" width="180"><br><strong>Front</strong></td>
-    <td align="center"><img src="assets/images/dia-right-crop.png" alt="Dia right side view" width="150"><br><strong>Right</strong></td>
-    <td align="center"><img src="assets/images/dia-back-crop.png" alt="Dia back view" width="180"><br><strong>Back</strong></td>
-    <td align="center"><img src="assets/images/dia-left-crop.png" alt="Dia left side view" width="150"><br><strong>Left</strong></td>
-  </tr>
-</table>
+<div align="center">
+  <img src="assets/images/dia-turnaround-strip.png" alt="Dia turnaround views" width="860">
+</div>
