@@ -8,8 +8,8 @@ Avoidant by instinct. Hopeless romantic anyway. Dia keeps her distance,
 reads the room too well, and still believes the right person might understand
 the quiet parts.
 
-<a href="https://raw.githack.com/saxrasm/Dia/main/index.html">
-  <kbd><strong>Open site</strong></kbd>
+<a href="https://htmlpreview.github.io/?https://github.com/saxrasm/Dia/blob/main/index.html">
+  <img src="https://img.shields.io/badge/OPEN%20DIA-SITE-c8a4c7?style=for-the-badge&labelColor=141519&color=c8a4c7" alt="Open Dia site">
 </a>
 
 <br>
@@ -54,4 +54,4 @@ she already knew you would look.
 
 This repository includes both the GitHub README profile and a static site
 version in [`index.html`](index.html). The button above opens the rendered
-site directly.
+site directly through HTML Preview.
