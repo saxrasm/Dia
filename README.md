@@ -8,7 +8,7 @@ Avoidant by instinct. Hopeless romantic anyway. Dia keeps her distance,
 reads the room too well, and still believes the right person might understand
 the quiet parts.
 
-<a href="https://htmlpreview.github.io/?https://github.com/saxrasm/Dia/blob/main/index.html">
+<a href="https://rawcdn.githack.com/saxrasm/Dia/5210a1265e22d4b0833ba8c32c9e13c23838e8f7/index.html">
   <img src="https://img.shields.io/badge/OPEN%20DIA-SITE-c8a4c7?style=for-the-badge&labelColor=141519&color=c8a4c7" alt="Open Dia site">
 </a>
 
