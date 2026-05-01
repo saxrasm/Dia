@@ -27,10 +27,10 @@ body {
   color: var(--ink);
   font-family: Inter, Arial, sans-serif;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-    #101115;
-  background-size: 54px 54px, 54px 54px, auto;
+    linear-gradient(90deg, rgba(92, 86, 95, 0.18) 1px, transparent 1px),
+    linear-gradient(rgba(92, 86, 95, 0.15) 1px, transparent 1px),
+    linear-gradient(135deg, #15151a 0%, #0d0e12 45%, #18121a 100%);
+  background-size: 34px 34px, 34px 34px, auto;
 }
 
 body::before {
@@ -76,8 +76,40 @@ img {
   margin: 0 auto;
 }
 
+.psx-header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-top: 18px;
+  border: 1px solid rgba(242, 238, 232, 0.18);
+  border-radius: 2px;
+  padding: 12px 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent 44%),
+    #171820;
+  box-shadow:
+    inset 2px 2px 0 rgba(255, 255, 255, 0.09),
+    inset -2px -2px 0 rgba(0, 0, 0, 0.55),
+    0 20px 60px rgba(0, 0, 0, 0.32);
+  color: var(--muted);
+  font-family: var(--pixel);
+  font-size: 0.55rem;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.psx-header span:nth-child(2) {
+  color: var(--gold);
+}
+
+.psx-header span:last-child {
+  justify-self: end;
+  color: var(--lilac);
+}
+
 .hero {
-  min-height: 92vh;
+  min-height: calc(92vh - 66px);
   display: grid;
   grid-template-columns: minmax(0, 0.84fr) minmax(360px, 1.16fr);
   gap: clamp(28px, 5vw, 72px);
@@ -162,6 +194,38 @@ h2 {
   text-transform: uppercase;
 }
 
+.psx-window {
+  border: 1px solid rgba(242, 238, 232, 0.2);
+  border-radius: 2px;
+  padding: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 36%),
+    #111218;
+  box-shadow:
+    inset 2px 2px 0 rgba(255, 255, 255, 0.08),
+    inset -2px -2px 0 rgba(0, 0, 0, 0.58),
+    0 30px 90px rgba(0, 0, 0, 0.45);
+}
+
+.window-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid rgba(242, 238, 232, 0.12);
+  border-bottom: 0;
+  padding: 10px 12px;
+  background: #22202a;
+  color: var(--muted);
+  font-family: var(--pixel);
+  font-size: 0.52rem;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.window-bar span:last-child {
+  color: var(--green);
+}
+
 .hero-figure {
   min-height: 0;
   margin: 0;
@@ -183,6 +247,11 @@ h2 {
   image-rendering: auto;
 }
 
+.hero-window {
+  transform: perspective(1200px) rotateY(-2deg);
+  transform-origin: center;
+}
+
 .profile-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
@@ -201,6 +270,17 @@ h2 {
     inset 2px 2px 0 rgba(255, 255, 255, 0.07),
     inset -2px -2px 0 rgba(0, 0, 0, 0.48),
     0 22px 70px var(--shadow);
+}
+
+.profile-panel::before,
+.sheet-section::before {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin-bottom: 18px;
+  background:
+    linear-gradient(90deg, #d84b4b 0 25%, #d7bb46 25% 50%, #51a36a 50% 75%, #4d72b8 75% 100%);
 }
 
 .intro-panel p:not(.section-kicker) {
