@@ -188,50 +188,81 @@ dd {
 }
 
 .turnaround {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.62fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: center;
   padding: 0 0 78px;
 }
 
-.section-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 18px;
+.turnaround-copy p:last-child {
+  max-width: 34rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
-.section-heading h2 {
-  margin-bottom: 0;
-}
-
-.turnaround-strip {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.turnaround-strip figure {
+.turnaround-stage {
+  position: relative;
+  width: min(100%, 390px);
+  aspect-ratio: 0.58;
   margin: 0;
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
   background: var(--panel);
+  box-shadow: 0 24px 70px var(--shadow);
 }
 
-.turnaround-strip img {
+.turn {
+  position: absolute;
+  inset: 0 0 auto;
   width: 100%;
-  height: 510px;
+  height: calc(100% - 43px);
   object-fit: contain;
   object-position: 50% 100%;
   background: #121318;
+  opacity: 0;
+  animation: rotateTurn 4.8s steps(1, end) infinite;
 }
 
-.turnaround-strip figcaption {
+.turn.right {
+  animation-delay: 1.2s;
+}
+
+.turn.back {
+  animation-delay: 2.4s;
+}
+
+.turn.left {
+  animation-delay: 3.6s;
+}
+
+.turnaround-stage figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border-top: 1px solid var(--line);
   padding: 12px 14px;
+  background: rgba(18, 19, 24, 0.82);
   color: var(--muted);
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+@keyframes rotateTurn {
+  0%,
+  24.99% {
+    opacity: 1;
+  }
+
+  25%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .mood-section {
@@ -297,12 +328,13 @@ dd {
     font-size: clamp(4.6rem, 28vw, 8rem);
   }
 
-  .turnaround-strip {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .turnaround {
+    grid-template-columns: 1fr;
   }
 
-  .turnaround-strip img {
-    height: 430px;
+  .turnaround-stage {
+    width: min(100%, 360px);
+    justify-self: center;
   }
 }
 
@@ -330,12 +362,8 @@ dd {
     gap: 6px;
   }
 
-  .turnaround-strip {
-    grid-template-columns: 1fr;
-  }
-
-  .turnaround-strip img {
-    height: 480px;
+  .turnaround-stage {
+    width: min(100%, 320px);
   }
 
   .sheet-section {
